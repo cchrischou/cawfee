@@ -12,24 +12,24 @@
   </head>
   <body>
 
-    <!-- INPUT FIELD FOR 1 CHARACTER -->
-    <input type="text" id="charInput" maxlength="1" />
-
-     <!-- SLIDER TO CHANGE IMG SIZE -->
-     <div class="slider-container">
-        <label for="imageSizeSlider"></label>
-        <input type="range" id="imageSizeSlider" min="100" max="500" value="200">
-    </div>
-    
     <!-- BUTTON TO DISPLAY IMAGE -->
     <img src="./imgs/essenza.png" id="submitButton" alt="Submit" onclick="displayImage()" />
+
+    <!-- INPUT FIELD AND SLIDER BELOW THE BUTTON -->
+    <div class="input-container">
+      <input type="text" id="charInput" maxlength="1" />
+      
+      <!-- SLIDER TO CHANGE IMG SIZE -->
+      <div class="slider-container">
+        <label for="imageSizeSlider"></label>
+        <input type="range" id="imageSizeSlider" min="100" max="500" value="200">
+      </div>
+    </div>
     
     <div id="imageContainer">
         <!-- Image will be displayed after input -->
         <img id="displayedImage" src="imgs/essenza.png" alt="Displayed Image" style="display: none;">
     </div>
 
-   
-  
   </body>
 </html>

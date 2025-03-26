@@ -1,18 +1,58 @@
+/* STYLE FOR THE BODY */
 body {
-    background-color: rgb(255, 210, 141);
+    background-color: beige;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
+    flex-direction: column; 
     height: 100vh;
     margin: 0;
     padding-left: 2em;
+    padding-top: 100px; 
+}
+
+/* STYLE FOR THE SUBMIT BUTTON */
+#submitButton {
+    width: 40%;
+    height: auto;
+    position: fixed;
+    top: 2px; 
+    right: 20px; 
+    transform: rotate(-90deg); 
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px rgb(255, 255, 255));
+    z-index: 10;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+#submitButton:hover {
+    transform: rotate(-90deg) scale(1.1); 
+    filter: drop-shadow(0 0 30px rgb(255, 255, 255)); 
+}
+
+/* STYLE FOR THE INPUT-CONTAINER */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 600px;
+    left: 79%; 
+    transform: translateX(-50%); 
+    z-index: 5; 
 }
 
 /* STYLE FOR THE INPUT FIELD */
 #charInput {
     text-align: center;
     font-size: 24px;
-    font-family: "Bodoni Moda", serif;
+    font-family: "helvetica";
+    font-weight: bold;
+    text-transform: uppercase;
+    
     font-optical-sizing: auto;
     font-weight: weight;
     padding: 10px;
@@ -23,54 +63,15 @@ body {
     filter: drop-shadow(0 0 20px rgb(255, 255, 255));
 }
 
-/* STYLE FOR THE INPUT-CONTAINER */
-.input-container {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;    
-    padding: 20px;
-}
-
-/* STYLE FOR THE SUBMIT BUTTON */
-#submitButton {
-    width: 40%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    filter: drop-shadow(0 0 20px rgb(255, 255, 255));
-}
-
-/* STYLE FOR THE CONTAINER */
-#imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-}
-
-/* STYLE FOR THE IMAGE */
-#displayedImage {
-    display: none; 
-    width: 200px; 
-    animation: bounce 1s infinite;
-    position: absolute;
-    left: 35em;
-    filter: drop-shadow(0 0 20px rgb(255, 255, 255));
-}
-
 /* STYLE FOR THE SLIDER CONTAINER */
 .slider-container {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* STYLE FOR THE SLIDER */
 #imageSizeSlider {
     width: 150px;
     -webkit-appearance: none; 
@@ -80,10 +81,9 @@ body {
     border-radius: 5px;
     outline: none;
     filter: drop-shadow(0 0 20px rgb(255, 255, 255));
-
 }
 
-/* STYLE FOR THE SLIDER THUMB  */
+/* STYLE FOR THE SLIDER THUMB */
 #imageSizeSlider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -102,6 +102,27 @@ body {
     background-image: url('./imgs/coffee.webp'); 
     background-size: cover;
     cursor: pointer;
+}
+
+/* STYLE FOR THE CONTAINER */
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* STYLE FOR THE IMAGE */
+#displayedImage {
+    display: none; 
+    width: 200px; 
+    animation: bounce 1s infinite;
+    right: 50%; 
+    top: 30%; 
+    transform: translateY(-50%); 
+    filter: drop-shadow(0 0 20px rgb(255, 255, 255));
+    position: fixed;
 }
 
 @keyframes bounce {
